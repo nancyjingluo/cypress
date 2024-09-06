@@ -1,0 +1,15 @@
+{
+  "name": "project01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "my first cypress project",
+  "devDependencies": {
+    "cypress": "^13.14.2"
+  }
+}
