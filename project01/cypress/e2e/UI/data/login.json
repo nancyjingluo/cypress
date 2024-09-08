@@ -17,15 +17,18 @@
         "password":"123",
         "validate":{
             "checkpoint": [".van-toast__text", "contain","账号或密码错误"]
-            }} 
-        
-        ] ,  
-    "nothing_input":[{
-        "name":"输入空的账号和密码,使用先输入再清空",
-        "username":"asdasd",
-        "password":"asdasa",
+            }} ,
+        {
+        "name":"输入空字符串",
+        "username":"",
+        "password":"",
         "validate":{
-        "checkpoint":  ["._username_1k5ar_19 > ._errorMsg_1k5ar_67 > span", "contain", "请输入邮箱"]}}]
-        
-    
+        "checkpoint":  ["._username_1k5ar_19 > ._errorMsg_1k5ar_67 > span", "contain", "请输入邮箱"]}},
+        {
+        "name":"输入多个空格",
+        "username":"  ",
+        "password":"  ",
+        "validate":{
+        "checkpoint": [".van-toast__text", "contain","账号或密码错误"]}}]
+       
 }

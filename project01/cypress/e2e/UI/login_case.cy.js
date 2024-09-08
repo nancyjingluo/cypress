@@ -3,10 +3,10 @@ import data from "./data/login.json"
 
 describe("登录功能验证",function(){
     
-    let loginHL = new Login_Page()
+    let loginRM = new Login_Page()
 
     beforeEach(function(){
-        loginHL.visit()
+        loginRM.visit()
         //cy.wrap(loginHL).as('testlogin') //返回传递给loginhl的对象,使用as命令设置别名,方便在测试用例中引用
     })
     /* 
@@ -18,7 +18,7 @@ describe("登录功能验证",function(){
 
     data.success.forEach( item => { // 遍历login.json中succses的数据
         it(item.name,()=>{
-            loginHL.login(item.username,item.password) //获取账号密码后登录
+            loginRM.login(item.username,item.password) //获取账号密码后登录
             cy.url().should("include",'/home/landing')
             cy.url().should(item.validate.checkpoint[1],item.validate.checkpoint[2])
         })
@@ -26,19 +26,19 @@ describe("登录功能验证",function(){
 
     data.fail.forEach(item =>{
         it(item.name,function(){
-            loginHL.login(item.username,item.password)
+            loginRM.login(item.username,item.password)
             cy.get(item.validate.checkpoint[0]).should(item.validate.checkpoint[1],item.validate.checkpoint[2])
 
         })
     })
 
-    data.nothing_input.forEach(item =>{
-        it(item.name,function(){
-            loginHL.login_no_value(item.username,item.password)
-            cy.get(item.validate.checkpoint[0]).should(item.validate.checkpoint[1],item.validate.checkpoint[2])
+    // data.nothing_input.forEach(item =>{
+    //     it(item.name,function(){
+    //         loginHL.login_no_value(item.username,item.password)
+    //         cy.get(item.validate.checkpoint[0]).should(item.validate.checkpoint[1],item.validate.checkpoint[2])
 
-        })
-    })
+    //     })
+    // })
         
 
 })

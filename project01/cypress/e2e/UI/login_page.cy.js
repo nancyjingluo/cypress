@@ -28,21 +28,18 @@ export default class Login_Page {
     //封装登录的业务流程
 
     login(user,pwd){
-        if(user !== ""){
-            this.username.type(user)
+
+        if(user === "" && pwd ===""){
+            this.username.clear()
+            this.passwrod.clear()
         }
-        if(pwd !== ""){
-            this.passwrod.type(pwd)
-        }
-        this.submit.click()
-    }
-    login_no_value(user,pwd){
-        if(user == ""){
-            this.username.type(user).clear()
-        }
-        if(pwd == ""){
-            this.passwrod.type(pwd).clear()
+        else {
+            if(pwd !== ""){
+                this.username.type(user) }
+            if(pwd !== ""){
+                this.passwrod.type(pwd) }
         }
         this.submit.click()
     }
+    
 }
