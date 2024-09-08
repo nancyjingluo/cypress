@@ -10,6 +10,14 @@
   "license": "ISC",
   "description": "my first cypress project",
   "devDependencies": {
-    "cypress": "^13.14.2"
+    "cypress": "^13.14.2",
+    "mochawesome": "^7.1.3"
+  },
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "overwrite": true,
+    "html": true,
+    "json": false
   }
 }
