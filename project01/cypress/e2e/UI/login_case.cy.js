@@ -32,13 +32,4 @@ describe("登录功能验证",function(){
         })
     })
 
-    // data.nothing_input.forEach(item =>{
-    //     it(item.name,function(){
-    //         loginHL.login_no_value(item.username,item.password)
-    //         cy.get(item.validate.checkpoint[0]).should(item.validate.checkpoint[1],item.validate.checkpoint[2])
-
-    //     })
-    // })
-        
-
 })

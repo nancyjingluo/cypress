@@ -35,9 +35,11 @@ export default class Login_Page {
         }
         else {
             if(pwd !== ""){
-                this.username.type(user) }
+                this.username.type(user) 
+            }
             if(pwd !== ""){
-                this.passwrod.type(pwd) }
+                this.passwrod.type(pwd) 
+            }
         }
         this.submit.click()
     }

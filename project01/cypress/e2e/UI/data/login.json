@@ -12,23 +12,25 @@
         "validate":{
             "checkpoint": [".van-toast__text", "contain","账号或密码错误"]}},
         {
-        "name":"输入错误的者密码,应该提示“账号或密码错误，请重新填写。”",
+        "name":"输入错误的密码,应该提示“账号或密码错误，请重新填写。”",
         "username":"nancy",
         "password":"123",
         "validate":{
             "checkpoint": [".van-toast__text", "contain","账号或密码错误"]
             }} ,
+
         {
-        "name":"输入空字符串",
-        "username":"",
-        "password":"",
-        "validate":{
-        "checkpoint":  ["._username_1k5ar_19 > ._errorMsg_1k5ar_67 > span", "contain", "请输入邮箱"]}},
-        {
-        "name":"输入多个空格",
+        "name":"输入多个空格,走的是输入逻辑,账号密码不正确",
         "username":"  ",
         "password":"  ",
         "validate":{
-        "checkpoint": [".van-toast__text", "contain","账号或密码错误"]}}]
+        "checkpoint": [".van-toast__text", "contain","账号或密码错误"]}},
+        
+        {
+        "name":"输入空字符串,走没有输入逻辑(走clear方法),提示需要输入邮箱",
+        "username":"",
+        "password":"",
+        "validate":{
+        "checkpoint":  ["._username_1k5ar_19 > ._errorMsg_1k5ar_67 > span", "contain", "请输入邮箱"]}}]
        
 }
