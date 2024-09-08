@@ -1,0 +1,31 @@
+{
+    "success":[{
+        "name":"输入正确的账号密码,登录成功",
+        "username":"nancy",
+        "password":"a12345678",
+        "validate":{
+            "checkpoint": ["url", "include", "/home/landing"]}}],
+    "fail":[{
+        "name":"输入错误的账号,应该提示“账号或密码错误，请重新填写。”",
+        "username":"nancy111",
+        "password":"a12345678",
+        "validate":{
+            "checkpoint": [".van-toast__text", "contain","账号或密码错误"]}},
+        {
+        "name":"输入错误的者密码,应该提示“账号或密码错误，请重新填写。”",
+        "username":"nancy",
+        "password":"123",
+        "validate":{
+            "checkpoint": [".van-toast__text", "contain","账号或密码错误"]
+            }} 
+        
+        ] ,  
+    "nothing_input":[{
+        "name":"输入空的账号和密码,使用先输入再清空",
+        "username":"asdasd",
+        "password":"asdasa",
+        "validate":{
+        "checkpoint":  ["._username_1k5ar_19 > ._errorMsg_1k5ar_67 > span", "contain", "请输入邮箱"]}}]
+        
+    
+}
