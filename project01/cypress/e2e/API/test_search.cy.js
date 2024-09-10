@@ -1,4 +1,4 @@
-import GetToken from "./token.cy.js";
+import GetToken from "./tools/token.cy.js";
 describe('功能验证',()=>{
     
     let tools = new GetToken()

@@ -1,0 +1,26 @@
+[
+    {
+        "casename":"查询空间",
+        "url":"/api/spaces/search",
+        "method":"get",
+        "failOnStatusCode": false,
+        "headers":{ "Content-Type":"application/json"},
+        "qs": { 
+            "pageIndex" : 1,
+            "pageSize" : 10,
+            "keyWord":"999999"},
+        "status":200
+    },
+    {
+        "casename":"查询今日排程",
+        "url":"/api/spaces/search",
+        "method":"get",
+        "headers":{ "Content-Type":"application/json"},
+        "qs": { 
+            "start":"2024-09-08",
+            "end":"2024-09-08",
+            "status":"ACTIVE" },
+        "status":200
+    }
+
+]
